@@ -1,0 +1,40 @@
+/*Navbar*/
+    .navbar
+    {
+        /*Background*/
+            background-color: var(--default-light-brown);
+
+        /*Position*/
+            z-index: 1;
+
+        /*Padding*/
+            padding-left: 2vh;
+            padding-right: 5vh;
+            padding-top: 1vw;
+            padding-bottom: 1vw;
+    }
+
+    .logo
+    {
+        /*Size*/
+            width: 5vw;
+    }
+    .navbar-toggler
+    {
+        /*Border*/
+            border-width: 0.2vh;
+            border-style: solid;
+            border-color: var(--default-dark-brown); 
+    }
+
+    .navbar-toggler-icon
+    {
+        /*Background*/
+            background-image: url(../img/menuIcon.png);
+    }
+
+    .nav-link
+    {
+        /*Text*/
+            color: var(--default-dark-brown);
+    }

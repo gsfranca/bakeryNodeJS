@@ -1,0 +1,268 @@
+
+/*Bag of Items Col*/
+    .bagCol
+    {
+        /*Background*/
+            background-color: var(--default-white);
+
+        /*Position*/
+            position: fixed; 
+            top: 0;
+            z-index: 0;
+            
+
+        /*Size*/
+            padding-left: 5vh;
+            padding-right: 5vh;
+
+            width: max-content;
+            height: 100%;
+
+    }
+
+/*Main Title*/
+    .titleCreate
+    {
+        /*Text*/
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            
+        /*Position*/
+            margin-top: 9vw;
+            margin-bottom: 1.5vw;
+    }
+
+/*List of Items Choosen*/
+    .itemsList
+    {
+        /*Size*/
+            width: fit-content;
+
+        /*Position*/
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+    }
+
+/*Text of Items Choosen*/
+    .itemsOrdered
+    {
+        /*Text*/
+            text-transform: uppercase;
+            font-weight: bold;
+
+        /*Position*/
+            margin-bottom: 0.2vw;
+    }
+    .quantity_itemOrdered::after
+    {
+        /*Content*/
+            content: 'X';
+    }
+    .price_itemOrdered::before
+    {
+        /*Content*/
+            content: 'R$';
+
+        /*Position*/
+            margin-right: 0.2vh;
+    }
+
+/*Total*/
+    .totalItemsOrdered
+    {
+        /*Text*/
+            text-transform: uppercase;
+            font-weight: bold;
+
+        /*Background*/
+            background-color: var(--default-light-brown);
+
+        /*Size*/
+            width: fit-content;
+
+            padding-top: 0.5vw;
+            padding-bottom: 0.5vw;
+            padding-left: 2vh;
+            padding-right: 2vh;
+
+        /*Border*/
+            border-radius: 0.5vw;
+
+        /*Position*/
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+
+            margin-top: 1.5vw;
+            margin-bottom: 5vw;
+    }
+
+    #total_ordering
+    {
+        /*Position*/
+            margin-left: 6vh;
+    }
+
+    #total_ordering::before
+    {
+        /*Content*/
+            content: 'R$';
+
+        /*Position*/
+            margin-right: 0.2vh;
+    }
+
+
+/*Button submit for create a ordering*/
+    .btnOrder
+    {
+        /*Background*/
+            background-color: var(--default-dark-brown);
+
+        /*Text*/
+            text-transform: uppercase;
+            color: white;
+            font-size: 1.05vw;
+
+        /*Size*/
+            padding-top: 1vw;
+            padding-bottom: 1vw;
+            padding-left: 5vh;
+            padding-right: 5vh;
+
+        /*Border*/
+            border: none;
+            border-radius: 2vw;
+
+        /*Position*/
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+    }
+/*Items Choosen Col*/
+    .chooseCol
+    {
+        position: absolute;
+        width: 70%;
+
+        right: 0;
+    }
+
+/*Card of the item that is being sold*/
+    .cardItem
+    {
+        /*Background*/
+            background-color: var(--default-white);
+        
+        /*Border*/
+            border-radius: 5vw;
+
+        /*Padding*/
+            padding-top: 2vw;
+            padding-bottom: 1vw;
+
+        /*Margin*/
+            margin-top: 2vw;
+            margin-right: 3vh;
+
+    }
+
+/*Image of the item card*/
+    .picture_itemToChoose
+    {
+        /*Size*/
+            width: 7vw;
+
+        /*Position*/
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+
+            margin-bottom: 1vw;
+    }
+
+/*Name of the item card*/
+    .name_itemToChoose
+    {
+        /*Text*/
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 1.05vw;
+            font-weight: bold;
+
+    }
+
+/*Description of the item card*/
+    .description_itemToChoose
+    {
+        /*Text*/
+            text-align: center;
+    }
+
+/*Price of the item card*/
+    .price_itemToChoose
+    {
+        /*Text*/
+            font-size: 0.85vw;
+            font-weight: bold;
+            text-align: center;
+    }
+    .price_itemToChoose::before
+    {
+        /*Content*/
+            content: 'R$';
+    }
+
+/*Buttons to add or subtract a item*/
+    .addCol
+    {    
+        /*Position*/
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+    }
+    .addButtons
+    {
+        /*Position*/
+            position: relative;
+
+        /*Size*/
+            width: 1vh;
+            height: 1.5vw;
+            
+        /*Background*/    
+            background-color: var(--default-dark-brown);    
+            
+        /*Border*/
+            border: none;
+            border-radius: 0.5vw;
+
+    }
+    .addButtons text
+    {
+        /*Text*/
+            color: white;
+
+        /*Position*/
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+    }
+    .numberAddButton
+    {     
+        /*Text*/
+            text-align: center;
+
+        /*Position*/
+            margin-left: 1vh;
+            margin-right: 1vh;
+            margin-top: 1vw;
+
+        /*Size*/
+            width: fit-content;
+    }

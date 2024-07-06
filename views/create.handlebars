@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="../orderingCreateAndEdit.css">
+
+<!--Row Create - 2 Cols-->
+    <div class="row row-cols-2">
+
+        <!--Bag of Items Col-->
+            <div class="col bagCol">
+
+                <!--Title-->
+                    <h2 class="titleCreate">Pedido</h2>
+
+                <!--List of Items Choosen-->
+                    <div class="itemsList">
+
+                        <!--Item Ordered-->
+                            <p class="itemsOrdered">
+                                <text class="quantity_itemOrdered">1</text>
+                                <text class="name_itemOrdered">Pão Francês Integral</text>
+                                <text class="price_itemOrdered">2,99</text>
+                            </p>
+
+                    </div>
+
+                <!--Total-->
+                    <p class="totalItemsOrdered">
+                        <text>Total: </text>
+                        <text id="total_ordering" name="total_ordering">2,99</text>
+                    </p>
+
+                <!--Button Ordering-->
+                    <button type="submit" class="btnOrder">Confirmar Pedido</button>
+
+            </div>
+        <!--End of Bag of Items Col-->
+
+        <!--Choose Items Col-->
+            <div class="col chooseCol">
+                
+                <!--Row Card of Items - 4 Cols-->
+                    <div class="row row-cols-4">
+
+                        <!--Card Item-->
+                            <div class="col cardItem">
+
+                                <!--Picture-->
+                                    <img src="../img/breadPic.png" alt="item's picture" class="picture_itemToChoose">
+
+                                <!--Name-->
+                                    <h3 class="name_itemToChoose">Pão Francês Integral</h3>
+
+                                <!--Description-->
+                                    <p class="description_itemToChoose">O clássico pão francês em versão integral, saudável e delicioso.</p>
+
+                                <!--Price and Unit of Measurement-->
+                                    <p class="price_itemToChoose">
+                                        <text>2,99</text>
+                                        <text>/Unidade</text>
+                                    </p>
+
+                                <!--Buttons to add or subtract items-->
+                                    <div class="row row-cols-3 addCol">
+                                        <button class="col addButtons"><text>-</text></button>
+                                        <p class="col numberAddButton">0</p>
+                                        <button class="col addButtons"><text>+</text></button>
+                                    </div>
+
+                            </div>
+                        <!--End of Card Item-->
+
+
+                    </div>
+                <!--End of Row Card of Items-->
+            </div>
+        <!--End of Choose Items Col-->
+
+    </div>
+<!--End of Row Create-->
+
+<!--Confirmation Popup-->
+<!--End of Confirmation Popup-->

@@ -1,0 +1,61 @@
+<!-- orderingRead.handlebars -->
+
+<link rel="stylesheet" href="../orderingCreateAndEdit.css">
+<link rel="stylesheet" href="../orderingRead.css">
+
+<!-- Page Title -->
+<h1 class="readTitle">Pedidos Feitos</h1>
+
+<!-- Row List of Orderings - 3 Cols -->
+<div class="row row-cols-3 listOfOrderings">
+  {{#each pedidos}}
+    <!-- Bag of Items Col -->
+    <div class="col orderingCol">
+
+      <!-- Header -->
+      <div class="row row-cols-2">
+        <!-- Title -->
+        <h2 class="col titleRead">{{formatPedidoId this.pedidoId}}</h2>
+
+        <!-- Buttons -->
+        <div class="col buttonsCol">
+          <a href="/edit/{{this.id}}">
+            <img src="../img/editIcon.png" alt="Edit Icon">
+          </a>
+
+          <a href="/delete/{{this.id}}">
+            <img src="../img/deleteIcon.png" alt="Delete Icon">
+          </a>
+        </div>
+      </div>
+      <!-- End of Header -->
+
+      <!-- List of Items Choosen -->
+      <div class="itemsList">
+        {{#each this.items}}
+          <p class="itemsOrdered">
+            <span class="quantity_itemOrdered">{{this.quantity}}</span>
+            <span class="name_itemOrdered">{{this.name}}</span>
+            <span class="price_itemOrdered">{{formatPrice this.price}}</span>
+          </p>
+        {{/each}}
+      </div>
+
+      <!-- Total -->
+      <p class="totalItemsOrdering">
+        <span>Total: </span>
+        <span id="total_ordering" name="total_ordering">{{formatPrice this.total}}</span>
+      </p>
+    </div>
+    <!-- End of Bag of Items Col -->
+  {{/each}}
+</div>
+<!-- End of Row List of Orderings -->
+
+<!-- Script para formatação de preço -->
+<script>
+  // Função auxiliar para formatar preço com duas casas decimais
+  function formatPrice(price) {
+    return parseFloat(price).toFixed(2);
+  }
+</script>

@@ -1,0 +1,90 @@
+<link rel="stylesheet" href="../orderingCreateAndEdit.css">
+
+<!--Row Create - 2 Cols-->
+<div class="row row-cols-2">
+
+    <!--Bag of Items Col-->
+    <div class="col bagCol">
+
+        <!-- Form para enviar o pedido -->
+        <form id="orderForm" action="/create_pedido" method="post">
+
+            <!--Title-->
+            <h2 class="titleCreate">Pedido</h2>
+
+            <!--List of Items Choosen-->
+            <div class="itemsList">
+                <!--Item Ordered-->
+                <p class="itemsOrdered">
+                    Faça o seu pedido!
+                </p>
+            </div>
+
+            <!--Total-->
+            <p class="totalItemsOrdered">
+                <text>Total: </text>
+                <text id="total_ordering" name="total_ordering">0,00</text>
+            </p>
+
+            <!-- Hidden inputs to store cart data and total price -->
+            <input type="hidden" id="cartData" name="cartData">
+            <input type="hidden" id="totalOrderingInput" name="total_ordering">
+
+            <!--Button Ordering-->
+            <button type="submit" class="btnOrder" onclick="prepareOrderData()">Confirmar Pedido</button>
+
+        </form>
+
+    </div>
+    <!--End of Bag of Items Col-->
+
+    <!--Choose Items Col-->
+    <div class="col chooseCol">
+
+        <!--Row Card of Items - 4 Cols-->
+        <div class="row row-cols-4" style="margin-bottom: 5vw;">
+
+            {{!-- ForEach Loop --}}
+            {{#each paes}}
+
+            <!--Card Item-->
+            <div class="col cardItem">
+
+                <!--Picture-->
+                <img src="{{this.Imagem}}" alt="{{this.Nome}}" class="picture_itemToChoose">
+
+                <!--Name-->
+                <h3 class="name_itemToChoose">{{this.Nome}}</h3>
+
+                <!--Description-->
+                <p class="description_itemToChoose">{{this.Descricao}}</p>
+
+                <!--Price and Unit of Measurement-->
+                <p class="price_itemToChoose" data-price="{{this.Valor}}">
+                    <text>{{this.Valor}}</text>
+                    <text>/Unidade</text>
+                </p>
+
+                <!-- Buttons to add or subtract items -->
+                <div class="row row-cols-3 addCol">
+                    <button class="col addButtons" onclick="updateItemQuantity('{{this.Nome}}', {{this.Valor}}, -1)"><text>-</text></button>
+                    <p class="col numberAddButton" id="quantity_{{this.Nome}}">0</p>
+                    <button class="col addButtons" onclick="updateItemQuantity('{{this.Nome}}', {{this.Valor}}, 1)"><text>+</text></button>
+                </div>
+
+            </div>
+            <!--End of Card Item-->
+
+            {{/each}}
+
+        </div>
+        <!--End of Row Card of Items-->
+    </div>
+    <!--End of Choose Items Col-->
+
+</div>
+<!--End of Row Create-->
+
+ <!--JavaScript-->
+    <script src="../../js/orderingCreate.js"></script>
+<!--End of JavaScript-->

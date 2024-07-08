@@ -1,0 +1,110 @@
+/*Main Title*/
+    .readTitle
+    {
+        /*Text*/
+            text-align: center;
+
+        /*Position*/
+            margin-top: 2vw;
+            margin-bottom: 2vw;
+    }
+
+/*List of orderings (List of cards)*/
+    .listOfOrderings
+    {
+        /*Size*/
+            width: 95%;
+
+        /*Position*/
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+
+            display: flex;
+            justify-content: center;
+
+        
+    }
+/*Card that contains info about the Ordering*/
+    .orderingCol
+    {
+        /*Backgrond*/
+            background-color: var(--default-white);
+
+        /*Size*/
+            width: max-content;
+
+        /*Padding*/
+            padding-left: 8vh;
+            padding-right: 8vh;
+            padding-top: 2vw;
+            padding-bottom: 2vw;
+
+        /*Position*/
+            margin-right: 3vh;
+            margin-left: 3vh;
+            margin-bottom: 2vw;
+
+        /*Border*/
+            border-radius: 4vw;
+    }
+
+/*Title of the card*/
+    .titleRead
+    {
+        /*Text*/
+            text-transform: uppercase;
+            font-weight: bold;
+
+        /*Size*/
+            width: fit-content;
+    }
+
+/*Buttons for edit and delete*/
+    .buttonsCol
+    {
+        /*Size*/
+            width: fit-content;
+    }
+    
+    .buttonsCol a
+    {
+        /*Text*/
+            text-decoration: none;
+    }
+
+    .buttonsCol img
+    {
+        /*Size*/
+            width: 1.85vw;
+    }
+
+/*Total*/
+    .totalItemsOrdering
+    {
+        /*Text*/
+            text-transform: uppercase;
+            font-weight: bold;
+
+        /*Background*/
+            background-color: var(--default-light-brown);
+
+        /*Size*/
+            width: fit-content;
+
+            padding-top: 0.5vw;
+            padding-bottom: 0.5vw;
+            padding-left: 2vh;
+            padding-right: 2vh;
+
+        /*Border*/
+            border-radius: 0.5vw;
+
+        /*Position*/
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+
+            margin-top: 1.5vw;
+    }
+
